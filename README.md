@@ -70,12 +70,10 @@ First, you need compile source codes
 and make JAR in the same way of running with spark-shell.
 Then, we suppose that you have JAR as <your source root directory>/target/scala-2.10/basic-spark.jar.
 
-Next, you can run SparkPi with spark-class command.::
+Next, you can run SparkPi with spark-class command:
 
- $ SPARK_CLASSPATH=$SPARK_CLASSPATH:target/scala-2.10/basic-spark.jar /usr/lib/spark/bin/spark-class com.example.SparkPi local
- ...
- ..
- .
+```
+$ SPARK_CLASSPATH=$SPARK_CLASSPATH:target/scala-2.10/basic-spark.jar /usr/lib/spark/bin/spark-class com.example.SparkPi local
  14/03/02 11:51:01 INFO SparkContext: Job finished: reduce at SparkPi.scala:37, took 0.703761825 s
  pi: 3.1192
  14/03/02 11:51:02 INFO MapOutputTrackerMasterActor: MapOutputTrackerActor stopped!
@@ -88,6 +86,7 @@ Next, you can run SparkPi with spark-class command.::
  14/03/02 11:51:02 INFO RemoteActorRefProvider$RemotingTerminator: Shutting down remote daemon.
  14/03/02 11:51:02 INFO SparkContext: Successfully stopped SparkContext
  14/03/02 11:51:02 INFO RemoteActorRefProvider$RemotingTerminator: Remote daemon shut down; proceeding with flushing remote transports.
+```
 
 ## How to run SparkPi on the Spark standalone cluster
 
